@@ -40,4 +40,4 @@ jobs:
       run: |
         ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
-        rsync -avz --delete -e "ssh -p 22" ./personal-site/dist/personal-site ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/www
+        rsync -avz --delete -e "ssh -p 22" ./personal-site/dist/personal-site ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:www/
