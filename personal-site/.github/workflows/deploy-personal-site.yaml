@@ -6,20 +6,20 @@ on:
       - main # Or your main branch for deployments
     paths:
       - 'personal-site/**' 
-      - '.github/workflows/deploy-site-a.yml' 
+      - '.github/workflows/deploy-personal-site.yaml' 
 
   pull_request:
     branches:
       - main
     paths:
-      - 'site-a/**'
-      - '.github/workflows/deploy-site-a.yml'
+      - 'personal-site/**'
+      - '.github/workflows/deploy-personal-site.yaml' 
+
 jobs:
   deploy-personal-website:
     name: Deploy Personal Website
     runs-on: ubuntu-latest
-    if; 
-
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -32,7 +32,8 @@ jobs:
     - name: Build angular website
       run: |
         cd personal-site
-        ng build --base-href /
+        npm install
+        npm run build
         cp .htaccess dist/personal-site
 
     - name: Deploy to server
