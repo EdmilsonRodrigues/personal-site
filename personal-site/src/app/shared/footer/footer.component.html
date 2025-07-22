@@ -1,0 +1,9 @@
+<div class="container mx-auto text-gray-600 text-lg">
+  <p>🄯 2025 Edmilson Monteiro Rodrigues Neto. Free Software.</p>
+  <div class="flex justify-center space-x-6 mt-4">
+    @for (social of socials; track social.link) {
+    <a [href]="social.link" class="hover:text-orange-500 transition duration-300"
+       [target]="social.social ? '_blank' : ''" [rel]="social.social ? 'noopener noreferrer' : ''">{{ social.name }}</a>
+    }
+  </div>
+</div>

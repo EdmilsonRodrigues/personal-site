@@ -1,0 +1,22 @@
+<section class="bg-white p-10 md:p-16 rounded-2xl shadow-lg border-b-4 border-purple-400 mb-12">
+  <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 text-center mb-8">{{ title | translate }}</h1>
+
+  <h2 class="text-4xl font-bold text-orange-500 text-center mb-8 mt-12">{{ previousExperiences | translate }}</h2>
+  @for (paragraph of previousExperiencesParagraphs; track $index) {
+  <p class="text-xl text-gray-700 leading-relaxed mb-6" [innerHTML]="paragraph | translate"></p>
+  }
+
+  <h2 class="text-4xl font-bold text-orange-500 text-center mb-8 mt-12">{{ developerHistory | translate }}</h2>
+  @for (paragraph of developerHistoryParagraphs; track $index) {
+  <p class="text-xl text-gray-700 leading-relaxed mb-6" [innerHTML]="paragraph | translate"></p>
+  }
+
+  <h2 class="text-4xl font-bold text-orange-500 text-center mb-8 mt-12">{{ beyondCode | translate }}</h2>
+  @for (paragraph of beyondCodeParagraphs; track $index) {
+  <p class="text-xl text-gray-700 leading-relaxed mb-6" [innerHTML]="paragraph | translate"></p>
+  }
+</section>
+
+<div class="text-center mt-10">
+  <a href="/#contact" class="btn-primary text-white font-bold py-5 px-12 rounded-full shadow-xl">{{ cta | translate}}</a>
+</div>

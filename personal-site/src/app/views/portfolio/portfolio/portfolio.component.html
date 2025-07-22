@@ -1,0 +1,21 @@
+<section class="bg-white p-10 md:p-16 rounded-2xl shadow-lg border-b-4 border-orange-400 mb-12 text-center">
+  <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-8">{{ title | translate }}</h1>
+  <p class="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+    {{ summary | translate }}
+  </p>
+</section>
+
+<section class="py-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+    @for (card of cards; track card.link) {
+    <app-card [color]="card.color" [title]="card.title | translate" [content]="card.content | translate" [link]="card.link" />
+    }
+  </div>
+</section>
+
+<div class="text-center mt-12">
+  <a href="/#contact"
+     class="btn-primary text-white font-bold py-5 px-12 rounded-full shadow-xl w-full sm:w-auto inline-block">
+    {{ cta | translate }}
+  </a>
+</div>

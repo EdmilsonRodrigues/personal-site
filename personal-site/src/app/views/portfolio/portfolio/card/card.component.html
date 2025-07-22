@@ -1,0 +1,10 @@
+<div class="bg-white p-8 rounded-2xl shadow-lg border-b-4 border-{{ color() }}-400 card-hover transform transition duration-300 flex flex-col items-center text-center">
+  <h3 class="text-3xl font-bold text-{{ color() }}-600 mb-4">{{ title() }}</h3>
+  <p class="text-gray-700 text-base leading-relaxed mb-6">
+    {{ content() }}
+  </p>
+  <div class="mt-auto w-full">
+    <a [href]="link()" class="btn-primary text-white font-bold py-3 px-6 text-sm rounded-full shadow-lg w-full sm:w-auto text-center inline-block">{{ { 'en': 'View Projects', 'pt': 'Ver Projetos' } | translate }}</a>
+  </div>
+</div>
+

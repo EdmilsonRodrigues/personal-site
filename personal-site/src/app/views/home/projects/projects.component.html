@@ -1,0 +1,12 @@
+<section id="projects" class="py-20">
+  <h2 class="text-5xl font-bold text-center text-gray-900 mb-16">{{ title | translate }}</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+    @for (card of cards; track card.link) {
+    <app-card [color]="card.color" [title]="card.title | translate"
+              [summary]="card.summary | translate" [link]="card.link" />
+    }
+  </div>
+  <div class="text-center mt-16">
+    <a href="/portfolio" class="btn-primary text-white font-bold py-5 px-12 rounded-full shadow-xl">{{ viewAll | translate }}</a>
+  </div>
+</section>

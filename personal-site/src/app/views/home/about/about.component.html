@@ -1,0 +1,40 @@
+<!-- Hero/About Section -->
+<section id="about" class="bg-gray-900 p-8 md:p-10 lg:p-12 rounded-xl shadow-xl mb-12 border border-blue-800 flex flex-col md:flex-row items-center justify-between gap-8">
+  <div class="flex-1">
+    <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-blue-400 mb-4 leading-tight">
+      Analyst and Fullstack Developer <br>
+      <span class="text-blue-300 text-3xl md:text-4xl lg:text-5xl font-bold">with focus on Backend Development</span>
+    </h2>
+    <p class="text-lg text-gray-300 leading-relaxed mb-6">
+      Fullstack Developer with background in Analysis and Software Development, project management and RPA automation. Possessing solid skills in Java Spring, Python FastAPI, Angular 8+, TypeScript, in addition to experience in integrating distributed methodologies. Always focused on efficiency, with a constant commitment to innovation and continuous improvement.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href="#portfolio" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-center">
+        View Projects
+      </a>
+      <a href="#contact" class="inline-block border-2 border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-center">
+        Get in Touch
+      </a>
+    </div>
+  </div>
+  <div class="flex-1 bg-gray-800 p-6 rounded-xl shadow-inner border border-gray-700 max-w-lg w-full md:w-1/2 lg:w-2/5">
+    <div class="flex items-center space-x-2 mb-4">
+      <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+      <span class="w-3 h-3 bg-yellow-500 rounded-full"></span>
+      <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+      <span class="text-gray-400 text-sm ml-auto">server.js</span>
+    </div>
+    <pre class="text-sm text-gray-200 overflow-auto whitespace-pre-wrap"><code class="language-javascript">
+        const express = require('express');
+        const app = express();
+
+        app.get('/api/users', (req, res) => (
+        // Buscar usuários...
+        res.json(users);
+        ));
+
+        app.listen(3000);
+    </code></pre>
+  </div>
+</section>
+
