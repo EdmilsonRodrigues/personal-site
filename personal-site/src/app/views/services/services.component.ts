@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
 import { Content } from '../../services/language.service';
 import { TranslatePipe } from '../../pipes/translate.pipe';
 import { CardComponent } from './card/card.component';
@@ -13,7 +15,7 @@ interface Card {
 @Component({
     standalone: true,
     selector: 'app-services',
-    imports: [TranslatePipe, CardComponent],
+    imports: [TranslatePipe, CardComponent, RouterLink],
     templateUrl: './services.component.html',
     styleUrl: './services.component.scss'
 })

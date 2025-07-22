@@ -4,7 +4,7 @@
     {{ content() }}
   </p>
   <div class="mt-auto w-full">
-    <a [href]="link()" class="btn-primary text-white font-bold py-3 px-6 text-sm rounded-full shadow-lg w-full sm:w-auto text-center inline-block">{{ { 'en': 'View Projects', 'pt': 'Ver Projetos' } | translate }}</a>
+    <a [routerLink]="link()" class="btn-primary text-white font-bold py-3 px-6 text-sm rounded-full shadow-lg w-full sm:w-auto text-center inline-block">{{ { 'en': 'View Projects', 'pt': 'Ver Projetos' } | translate }}</a>
   </div>
 </div>
 

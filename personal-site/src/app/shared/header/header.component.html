@@ -1,13 +1,13 @@
 <div class="container mx-auto flex justify-between items-center">
   <div class="flex flex-col">
-    <h1><a href="/" class="text-4xl font-extrabold text-orange-500">Edmilson Rodrigues</a></h1>
+    <h1><a routerLink="/" class="text-4xl font-extrabold text-orange-500">Edmilson Rodrigues</a></h1>
     <p class="md:text-xl text-gray-800">{{ subTitle | translate }}</p>
   </div>
   <nav>
     <ul class="flex space-x-8">
       @for (link of links; track link.link) {
       <li>
-        <a [href]="link.link" target="_self"
+        <a [routerLink]="link.link" target="_self"
            class="text-gray-700 hover:text-orange-500 text-lg font-semibold transition duration-300"
            >
           {{ link.name | translate }}

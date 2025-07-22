@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
+import { CardComponent } from './card/card.component';
 import { Content } from '../../../services/language.service';
 import { TranslatePipe } from '../../../pipes/translate.pipe';
-import { CardComponent } from './card/card.component';
 
 interface Card {
     color: string
@@ -12,7 +14,7 @@ interface Card {
 
 @Component({
     selector: 'app-portfolio',
-    imports: [TranslatePipe, CardComponent],
+    imports: [TranslatePipe, CardComponent, RouterLink],
     templateUrl: './portfolio.component.html',
     styleUrl: './portfolio.component.scss'
 })

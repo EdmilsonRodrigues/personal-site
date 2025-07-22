@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
 import { Content } from '../../services/language.service';
 import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
     standalone: true,
     selector: 'app-about',
-    imports: [TranslatePipe],
+    imports: [TranslatePipe, RouterLink],
     templateUrl: './about.component.html',
     styleUrl: './about.component.scss'
 })

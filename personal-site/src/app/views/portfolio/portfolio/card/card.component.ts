@@ -1,9 +1,11 @@
 import { Component, input } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
 import { TranslatePipe } from '../../../../pipes/translate.pipe';
 
 @Component({
     selector: 'app-card',
-    imports: [TranslatePipe],
+    imports: [TranslatePipe, RouterLink],
     templateUrl: './card.component.html',
     styleUrl: './card.component.scss'
 })

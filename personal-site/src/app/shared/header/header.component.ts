@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
 import { Content, LanguageService } from '../../services/language.service';
 import { TranslatePipe } from '../../pipes/translate.pipe';
 import { FlagComponent } from './flags/flags.component';
@@ -12,7 +14,7 @@ interface Link {
 @Component({
     standalone: true,
     selector: 'app-header',
-    imports: [TranslatePipe, FlagComponent],
+    imports: [TranslatePipe, FlagComponent, RouterLink],
     templateUrl: './header.component.html',
     styleUrl: './header.component.scss'
 })

@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
 import { TranslatePipe } from '../../pipes/translate.pipe';
 import { Content } from '../../services/language.service';
 
 @Component({
     selector: 'app-page-not-found',
-    imports: [TranslatePipe],
+    imports: [TranslatePipe, RouterLink],
     templateUrl: './page-not-found.component.html',
     styleUrl: './page-not-found.component.scss'
 })

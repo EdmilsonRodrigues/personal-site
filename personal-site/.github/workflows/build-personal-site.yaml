@@ -6,7 +6,8 @@ on:
       - main # Or your deployment branch
 
 jobs:
-  deploy:
+  deploy-personal-website:
+    name: Deploy Personal Website
     runs-on: ubuntu-latest
 
     steps:
@@ -18,10 +19,14 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
+    - name: Build angular website
+      run: |
+        cd personal-site
+        ng build --base-href /
+        cp .htaccess dist/personal-site
+
     - name: Deploy to server
       run: |
         ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
-        rsync -avz --delete -e "ssh -p 22" ./build/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/your-website/
-        
-        # ssh user@your_server_ip_or_hostname "cd /var/www/your-website && sudo systemctl reload nginx"
+        rsync -avz --delete -e "ssh -p 22" ./dist/personal-site ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/www
